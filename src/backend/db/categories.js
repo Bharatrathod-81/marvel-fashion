@@ -8,20 +8,58 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
+    categoryName: "Nikon",
     description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+      "Our digital SLR cameras capture stunning images with cutting-edge speed, ... Side view of a Nikon DSLR with hot spots indicating different features.",
+    image:"/public/images/nikonPic1.webp"
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
+    categoryName: "Canon",
     description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+      "Canon EOS (Electro-Optical System) is an autofocus single-lens reflex camera (SLR) and mirrorless camera series produced by Canon Inc.",
+    image:"/public/images/canonPic3.webp"
   },
   {
     _id: uuid(),
-    categoryName: "horror",
+    categoryName: "Sony",
     description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+      "Sony DSLRs use A-mount lenses; compact system cameras use E-mount lenses (or A-mount with adapter).",
+    image:"/public/images/sonyPic3.webp"
   },
+  {
+    _id: uuid(),
+    categoryName: "Olympus",
+    description:
+      "Break Free with Olympus. Explore small, lightweight, travel-ready camera and lens systems to take your photography to exciting new places.",
+    image:"/public/images/olympusPic1.webp"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Leica",
+    description:
+      "Photography ; Leica S-System. The best tool. · Medium format DSLR. 64 MP. Dual shutter system. Cine4K Video. Professional ; Leica SL-System. It's your choice.",
+    image:"/public/images/leicaPic1.webp"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Fujifilm",
+    description:
+      "A compact active camera that is water-, dust-, shock- and freeze-proof. It is designed to offer a simple operability and functions for outdoor shooting use.",
+    image:"/public/images/FujifilmPic1.webp"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Pentax",
+    description:
+      " Pentax camera database lets you browse reviews and specifications of Pentax DSLRs, mirrorless cameras, compacts, and film bodies.",
+    image:"/public/images/PentaxPic1.webp"
+  },
+  {
+    _id: uuid(),
+    categoryName: "Panasonic",
+    description:
+      "The Panasonic Lumix DC-ZS200 marries a long zoom lens to a premium 1-inch image sensor. It's a very good pocket camera, but we wish the screen offered tilt.",
+    image:"/public/images/panasonicPic1.jpg"
+  }
 ];
