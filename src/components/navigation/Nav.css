@@ -1,0 +1,104 @@
+
+.nav-body{
+    position: sticky;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0%;
+    z-index: 2;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo1{
+    background-color: var(--text-color);
+    color:var(--primary-color);
+    font-size: 22px;
+    font-weight: bolder;
+    font-family:monospace;
+    padding: 0.3rem;
+}
+
+.logo2{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1px 6px 0 1px;
+}
+
+.list-col-left{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
+    
+}
+
+.list-col-right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    width: 14rem;
+}
+
+.badge{
+    display: flex;
+    position: relative;
+    padding: 0.6rem ;
+}
+
+
+.icons{
+    font-size: 18rem;
+}
+
+.Badge1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    border:1px solid var(--primary-color);
+    font-size: 10px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    top: 0%;
+    right: 0%;
+    display: none;
+}
+
+.atribute{
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+.login-btn{
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.1rem;
+}
+
+.input-container{
+    width: 35%;
+    margin-left: auto;
+}
+
+.search-input{
+    width: 80%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.searchBtn{
+    font-size: large;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.a,.button{
+    cursor: pointer;
+}

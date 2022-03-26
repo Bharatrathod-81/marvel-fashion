@@ -1,0 +1,29 @@
+.footer-containet {
+    position: relative;
+    top: 9.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 1px solid rgb(206, 202, 202);
+    line-height: 2rem;
+    padding: 0 0 1rem 0;
+    background-color: rgb(240, 232, 232);
+}
+
+ul {
+    color: var(--gray-500);
+}
+
+ul a {
+    color: var(--gray-500);
+}
+
+.gaurantee-container {
+    line-height: 1rem;
+    color: var(--gray-500);
+}
+
+.logo {
+    max-height: 80px;
+}
