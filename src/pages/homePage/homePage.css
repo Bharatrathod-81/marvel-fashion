@@ -66,3 +66,8 @@
     padding: 0.5rem;
 }
 
+.top-contains:hover{
+    transition: .5s;
+    box-shadow: 5px 5px 5px  rgb(140, 140, 148);
+}
+
