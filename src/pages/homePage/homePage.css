@@ -33,7 +33,6 @@
 .top-container{
     display: flex;
     justify-content: space-between; 
-    overflow:visible;
     overflow-x: scroll;
 }
 
@@ -49,9 +48,9 @@
 }
 
 .topContain-Img{
-    height: 100%;
-    width: 80rem;
-    margin: 0.5rem;
+    height: 90%;
+    width: 20rem;
+    margin: 1rem;
 }
 
 .topContain-text{
