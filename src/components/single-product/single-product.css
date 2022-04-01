@@ -1,0 +1,67 @@
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 17rem;
+    height: 45vh;
+    border: 2px solid rgb(233, 230, 230) ;
+    background-color: white;
+    margin: 1rem 0 3rem;
+}
+
+.card-Img{
+    width: 90%;
+    height: 25vh;
+    margin: 1rem;
+}
+
+.card-text{
+    position: relative;
+    border: 2px solid rgba(128, 128, 128, 0.363);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 19vh;
+}
+
+.heart-Btn{
+    position: absolute;
+    font-size: xx-large;
+    right: 9%;
+    top: 9%;
+    width: 3rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    background-color: rgba(167, 164, 164, 0.842);
+}
+
+.product-price,.card-name{
+    font-weight: bold;
+}
+
+.heart-Btn:hover,
+.heart-Btn:focus{
+    background-color: rgb(231, 227, 227);
+    color: var(--primary-color);
+}
+
+.card-Btn{
+    background-color: var(--Btn-background-color);
+    width: 100%;
+    padding: 0.6rem;
+}
+
+.card-Btn:hover,
+.card-Btn:focus{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.cards:hover{
+    transition: .5s;
+    box-shadow: 5px 5px 5px  rgb(140, 140, 148);
+};
