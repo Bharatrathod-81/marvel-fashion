@@ -1,5 +1,5 @@
 .product-container{
-    background-color: gray;
+    background-color: var(--container-background-color);
     width: 88%;
     margin-left: 1rem;
 }
