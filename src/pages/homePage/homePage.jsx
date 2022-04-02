@@ -18,7 +18,7 @@ const Home = () => {
                  <Link to="products">
                   <div 
                   className="top-contains"
-                  onClick={() => dispatchProductState({type:"FILTER_BY_CATEGORY", payload : categoryName})}
+                  onClick={() => dispatchProductState({type:"FILTER_BY_CATEGORY",payload:[categoryName]})}
                    >
                       <img className="topContain-Img" src={image}/>
                       <p className="topContain-text">{categoryName}</p>
@@ -31,7 +31,9 @@ const Home = () => {
             <div className="heading-text">
                 <h2>Best sale</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a className="shop-btn" href="/">Shop Now</a>
+                <Link to="products">
+                   <button className="shop-btn" >Shop Now</button>
+                </Link>
             </div>
             <img className="bottomContain-Img" src="./images/project-product1.jpg" alt="img"/>
         </div>
