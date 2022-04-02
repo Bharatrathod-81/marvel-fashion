@@ -40,13 +40,6 @@ const Footer = () => {
                         <li><small><a href="" target="_blank">Instagram</a></small></li>
                     </ul>
                 </div>
-                <div className="gaurantee-container">
-                    <img className="logo" src="https://thumbs.dreamstime.com/b/original-retro-rubber-stamp-vector-79086470.jpg" />
-                    <h3>
-                        100% ORIGINAL
-                    </h3>
-                    <p >guarantee for all products <br/> at neptune.com</p>
-                </div>
             </footer>
         </>
     )

@@ -1,0 +1,62 @@
+.side-bar{
+    position: sticky;
+    width: 12rem;
+    margin: 1rem;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.clear-btn{
+    background-color: white;
+    color: var(--primary-color);
+    font-weight:900;
+    font-size: large;
+    
+}
+
+h3{
+    margin: 1rem 0;
+}
+
+.slide-input{
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+}
+
+.range-input{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.checkbox-input{
+    margin: 0 0 1rem;
+}
+
+.category-block{
+    margin-left: 1rem;
+    width: 9rem;
+    height: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+}
+
+.rating-input{
+    margin: 0 0 1rem;
+}
+
+.short-input{
+    width: 1rem;
+    margin: 0 0 1rem;
+}
+
+.availability-input{
+    width: 1rem;
+    margin: 0 0 1rem;
+};
