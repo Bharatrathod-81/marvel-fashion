@@ -1,0 +1,144 @@
+
+
+.product-container{
+    background-color: var(--container-background-color);
+    width: 97%;
+    margin-left: 1rem;
+}
+
+
+.container-heading{
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cart-products{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: center;
+    margin: 2rem;
+}
+
+
+.cart-Cards{
+    border: 2px solid rgba(160, 158, 158, 0.23);
+    background-color: white;
+    padding: 0.5rem;
+    width: 35rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+.cart-card-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    height: 90%;
+    margin: 0.5rem;
+}
+
+.cart-card-name{
+    margin: 1rem;
+}
+
+.cart-card-Img{
+    width: 40%;
+    height: 90%;
+}
+
+.max-price{
+    color: gray;
+    font-size: larger;
+    text-decoration :line-through;
+}
+
+.discount-text{
+    color: gray;
+    font-size: larger;
+}
+
+.cart-card-Btn{
+    background-color: rgb(42, 97, 87);
+    color: var(--text-color);
+    padding: 0.6rem;
+    margin-bottom: 0.4rem;
+    width: 90%;
+}
+
+.add-cart-Btn{
+    width: 90%;
+    margin-bottom: 0.1rem;
+    padding: 0.6rem;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+.remove-cart-Btn{
+    background-color: rgb(42, 97, 87);
+    color: rgb(42, 97, 87);
+    color: var(--text-color);
+    box-sizing: border-box;
+    width: 90%;
+    padding: 0.5rem;
+}
+
+.product-quantity{
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    align-items: center;
+    width: 12rem;
+    height: 2rem;
+}
+
+.QuantityIncrease-Btn{
+    background-color: var(--Btn-background-color);
+    font-size: larger;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.quantity-num{
+    border: 1px solid;
+    width: 3rem;
+    height: 1.3rem;
+}
+
+.price-cal,
+.total-amt{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.price-details-cart{
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    width: 13rem;
+    height: 16rem;
+    margin: 1rem;
+    padding: 1rem;   
+}
+
+.place-orderBtn{
+    padding: 0.5rem;
+    background-color: var(--Btn-background-color);
+}
+
+.place-orderBtn:hover,
+.QuantityIncrease-Btn:hover{
+    background-color: var(--primary-color);
+    color:var(--text-color);
+}
