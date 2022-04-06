@@ -1,19 +1,15 @@
-.cardskk{
+.card-body{
     display: flex;
     flex-direction: column;
     align-items: center;
-/*     position: relative; */
-/*     width: 17rem; */
+    position: relative;
+    width: 17rem;
     height: 45vh;
     border: 2px solid rgb(233, 230, 230) ;
     background-color: white;
     margin: 1rem 0 3rem;
 }
 
-.card-body{
-    position: relative;
-    width: 17rem;
-}
 
 .card-Img{
     width: 90%;
