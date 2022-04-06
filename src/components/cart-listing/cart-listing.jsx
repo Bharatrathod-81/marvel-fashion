@@ -45,9 +45,7 @@ const RendingCart = () => {
                                     <div className="product-quantity">
                                         <small>Quantity</small>
                                         <button
-                                         onClick={() => { 
-                                             dispatchWishlistCart({type:"INCREASE_ITEMS",payload:item});
-                                            }}
+                                         onClick={() => dispatchWishlistCart({type:"INCREASE_ITEMS",payload:item})};
                                          className="QuantityIncrease-Btn"
                                          >+</button>
                                         <small className="quantity-num">{item.cartQuantity}</small>
