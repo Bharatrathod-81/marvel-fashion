@@ -11,7 +11,7 @@ const SingleProductFunc = ({data}) => {
 
 
     return(
-        <div className="cards card-body">
+        <div className="cardskk card-body">
             <div>
                 <img className="card-Img" src={data.image} alt={data.categoryName}/>
                 {wishlist.some(item => item.id === data.id) ?
