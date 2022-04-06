@@ -2,6 +2,8 @@ import "./productListing.css"
 import { useProductList } from "../../contexts/product-context";
 import { useFilteredProduct } from "../../contexts/filter-product-Context";
 import { SingleProductFunc } from "../../components/single-product/single-product";
+import { useWishlistCartContext } from "../../contexts/WishList-Cart";
+import { useState } from "react";
 
 
 const getFilteredProducts = () => {
@@ -38,6 +40,7 @@ const getFilteredProducts = () => {
         copyOfProductList = copyOfProductList.filter(({categoryName}) => categoryName.toLowerCase().includes(searchQuery.toLowerCase()));
     };
 
+
     if (category[0]!==undefined) {
         copyOfProductList = copyOfProductList.filter(({categoryName}) => category.includes(categoryName));
     };
@@ -50,6 +53,7 @@ const getFilteredProducts = () => {
 };
 
 const RendingProducts = () => {
+
     return(
         <div className="product-container">
             <div className="container-heading">
@@ -59,7 +63,7 @@ const RendingProducts = () => {
                 {getFilteredProducts().map(item => {
                     return(
                         <div key={item.id}>
-                        <SingleProductFunc data={item}/>
+                        <SingleProductFunc data={item} />
                         </div>
                     );
                 })}

@@ -15,8 +15,6 @@ export const products = [
     price: 40490,
     categoryName: "Panasonic",
     image:"./images/panasonicPic1.jpg",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -27,8 +25,6 @@ export const products = [
     price: 43591,
     categoryName: "Panasonic",
     image:"./images/panasonicPic2.jpeg",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -39,8 +35,6 @@ export const products = [
     price: 362565,
     categoryName: "Panasonic",
     image:"./images/panasonicPic3.webp",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -51,8 +45,6 @@ export const products = [
     price: 43190,
     categoryName: "Sony",
     image:"./images/sonyPic1.jpeg",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -63,8 +55,6 @@ export const products = [
     price: 60490,
     categoryName: "Sony",
     image:"./images/sonyPic2.jpg",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -75,8 +65,6 @@ export const products = [
     price: 38690,
     categoryName: "Sony",
     image:"./images/sonyPic3.webp",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -87,8 +75,6 @@ export const products = [
     price: 36499,
     categoryName: "Canon",
     image:"./images/canonPic1.jpg",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -99,8 +85,6 @@ export const products = [
     price: 57999,
     categoryName: "Canon",
     image:"./images/canonPic2.jpeg",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -111,8 +95,6 @@ export const products = [
     price: 90683,
     categoryName: "Canon",
     image:"./images/canonPic3.webp",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -123,8 +105,6 @@ export const products = [
     price: 12990,
     categoryName: "Nikon",
     image:"./images/nikonPic1.webp",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -135,8 +115,6 @@ export const products = [
     price: 70524.99,
     categoryName: "Olympus",
     image:"./images/olympusPic1.jpg",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -147,8 +125,6 @@ export const products = [
     price: 11456,
     categoryName: "Leica",
     image:"./images/leicaPic1.webp",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -159,8 +135,6 @@ export const products = [
     price: 15270.93,
     categoryName: "Fujifilm",
     image:"./images/FujifilmPic1.webp",
-    cart:false,
-    wishList:false
   },
   {
     _id: uuid(),
@@ -171,7 +145,5 @@ export const products = [
     price: 75660,
     categoryName: "Pentax",
     image:"./images/PentaxPic1.webp",
-    cart:false,
-    wishList:false
   }
 ];

@@ -17,6 +17,7 @@ const Home = () => {
             return(
                  <Link to="products">
                   <div 
+                  key={categoryName}
                   className="top-contains"
                   onClick={() => dispatchProductState({type:"FILTER_BY_CATEGORY",payload:[categoryName]})}
                    >
