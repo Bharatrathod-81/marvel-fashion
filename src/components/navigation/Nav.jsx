@@ -27,7 +27,7 @@ const Navigation = () => {
 
                 </li>
                 <ul className="list-col-right">
-                    <li><a className="atribute login-btn" href="/">Login</a></li>
+                    <li><Link className="atribute login-btn" to="login">Login</Link></li>
                     <li className="atribute badge">
                         <Link to="wishlist">
                             <div>&#10084;</div>

@@ -18,7 +18,7 @@ const RendingWishlist = () => {
 
 
     return(
-        <div className="product-container">
+        <div className="wishlist-container">
             <div className="container-heading">
                 <h4>Showing All WishList Products {getFilteredProducts().length}</h4>
             </div>
