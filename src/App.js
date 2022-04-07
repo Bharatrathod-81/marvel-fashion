@@ -7,7 +7,7 @@ import Home from "./pages/homePage/homePage";
 import ProductStore from "./pages/product-store/product-store";
 import WishListPage from "./pages/wishlist-page/wishList-page";
 import CartPage from "./pages/cart-page/cart-page";
-import Login from "./components/login/login";
+import LoginPage from "./pages/login-page/login-page";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="products" element={<ProductStore />}/>
           <Route path="wishlist" element={<WishListPage />}/>
           <Route path="cart" element={<CartPage />}/>
-          <Route path="login" element={<Login />}/>
+          <Route path="login" element={<LoginPage />}/>
         </Routes>
       <Footer/>
     </div>
