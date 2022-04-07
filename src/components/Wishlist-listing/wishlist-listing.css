@@ -1,7 +1,7 @@
-.product-container{
+.wishlist-container{
     background-color: var(--container-background-color);
-    width: 88%;
-    margin-left: 1rem;
+    width: 97%;
+    margin-left: auto;
 }
 
 .products{
