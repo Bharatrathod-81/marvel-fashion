@@ -37,9 +37,9 @@ const Login = () => {
                     <a href=""> Forgot your Password?</a>
                 </div>
                 <div className="email-input-container">
-                    <a href="/Login/Login.html" className="card-link"><button className="login-Btn">Login</button></a>
+                    <button className="login-Btn">Login</button>
                 </div>
-                <Link className="new-account" to="signup">
+                <Link className="new-account" to="/signup">
                     Sign up Now
                 </Link>
             </div>

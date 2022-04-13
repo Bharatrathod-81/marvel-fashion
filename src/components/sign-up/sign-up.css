@@ -1,26 +1,45 @@
-.main-login-container{
+.main-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.signup-body{
     background-color: var(--container-background-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
-    width: 97%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 95%;
 }
 
-
-.login-container{
+.signup-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     border: 2px solid rgba(128, 128, 128, 0.425);
     background-color: white;
-    width: 25rem;
+    width: 20rem;
 }
 
-.login-heading{
+
+.signup-heading{
     text-align: center;
+    margin: 1rem;
+}
+
+.name-input-container{
+    width: 90%;
+}
+
+.name-input{
+    border: 2px solid rgba(36, 34, 34, 0.185);
+    width: 100%;
+    height: 4vh;
+    margin-bottom: 1.5rem;
+    background-color: rgba(218, 216, 216, 0.541);
 }
 
 .email-input-container{
@@ -32,6 +51,14 @@
     width: 100%;
     height: 4vh;
     margin-bottom: 1.5rem;
+    background-color: rgba(218, 216, 216, 0.541);
+}
+
+.Password-input{
+    border: 2px solid rgba(36, 34, 34, 0.185);
+    width: 100%;
+    height: 4vh;
+    margin-bottom: 1rem;
     background-color: rgba(218, 216, 216, 0.541);
 }
 
@@ -50,20 +77,13 @@
     z-index: 2;
 }
 
-.Password-input{
-    border: 2px solid rgba(36, 34, 34, 0.185);
-    width: 100%;
-    height: 4vh;
-    background-color: rgba(218, 216, 216, 0.541);
-}
-
 .forgot-password{
     display: flex;
-    justify-content: space-between;
-    width: 21rem;
+    justify-content: space-around;
+    width: 100%;
 }
 
-.login-Btn{
+.signup-Btn{
     background-color: var(--Btn-background-color);
     width: 100%;
     padding: 0.7rem;
@@ -74,8 +94,8 @@
     margin: 1rem;
 }
 
-.login-Btn:hover,
-.login-Btn:focus{
+.signup-Btn:hover,
+.signup-Btn:focus{
     background-color: var(--primary-color);
     color: var(--text-color);
 }
