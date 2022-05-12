@@ -26,7 +26,7 @@ const WishlistAndCartProvider = ({ children }) => {
                     {...items,cartQuantity:items.cartQuantity+1 } : items );
                 return{...state,cart:[...addedItems]};
             case "DECREASE_ITEMS":
-                if (action.payload.cartQuantity>=1) {
+                if (action.payload.cartQuantity>1) {
                     let removedItems = state.cart.map(items => items.id === action.payload.id ? 
                         {...items,cartQuantity:items.cartQuantity-1 } : items );
                     return{...state,cart:[...removedItems]};
