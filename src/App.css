@@ -42,4 +42,9 @@ a{
   cursor: pointer;
 }
 
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1vh;
+}
+
 
