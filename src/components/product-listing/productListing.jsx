@@ -59,7 +59,7 @@ const RendingProducts = () => {
             <div className="container-heading">
                 <h4>Showing All Products {getFilteredProducts().length}</h4>
             </div>
-            <div className="products">
+            <div className="filter-products">
                 {getFilteredProducts().map(item => {
                     return(
                         <div key={item.id}>
