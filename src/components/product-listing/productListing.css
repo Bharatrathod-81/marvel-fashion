@@ -2,9 +2,10 @@
     background-color: var(--container-background-color);
     width: 88%;
     margin-left: 1rem;
+    border: 2px solid;
 }
 
-.products{
+.filter-products{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
