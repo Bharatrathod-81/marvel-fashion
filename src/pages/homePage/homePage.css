@@ -8,6 +8,7 @@
 .bottomContain-Img{
     height: 60vh;
     width: 90%;
+    object-fit: cover;
 }
 
 .shop-btn{
