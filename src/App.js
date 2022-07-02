@@ -8,7 +8,9 @@ import ProductStore from "./pages/product-store/product-store";
 import WishListPage from "./pages/wishlist-page/wishList-page";
 import CartPage from "./pages/cart-page/cart-page";
 import LoginPage from "./pages/login-page/login-page";
-import SignUpPage from "./pages/sign-up-page/signUp-page"
+import SignUpPage from "./pages/sign-up-page/signUp-page";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
           <Route path="signup" element={<SignUpPage/>}/>
         </Routes>
       <Footer/>
+      <ToastContainer/>
     </div>
   );
 }
