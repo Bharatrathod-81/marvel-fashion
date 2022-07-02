@@ -84,6 +84,7 @@
     color: var(--primary-color);
     font-weight: bold;
     padding: 0.1rem;
+    cursor: pointer;
 }
 
 .input-container{

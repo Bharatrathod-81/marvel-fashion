@@ -3,15 +3,19 @@ import { Link } from "react-router-dom";
 import "../navigation/Nav.css";
 import { useFilteredProduct } from "../../contexts/filter-product-Context";
 import { useWishlistCartContext } from "../../contexts/WishList-Cart";
+import { useAuthContext } from "../../contexts/auth-context";
 
 
 const Navigation = () => {
 
-    const { wishlistCartValues:{
+    const { isLogin, Logout } = useAuthContext();
+
+    const { wishlistCartValues: {
         wishlist, cart
-        } } = useWishlistCartContext();
+    } } = useWishlistCartContext();
 
     const { dispatchProductState } = useFilteredProduct();
+
 
     return (
         <nav className="nav-body">
@@ -27,21 +31,29 @@ const Navigation = () => {
 
                 </li>
                 <ul className="list-col-right">
-                    <li><Link className="atribute login-btn" to="login">Login</Link></li>
+                    {isLogin.user ?
+                        <li
+                            onClick={Logout}
+                            className="atribute login-btn">
+                            Logout
+                        </li>
+                        :
+                        <li><Link className="atribute login-btn" to="login">Login</Link></li>
+                    }
                     <li className="atribute badge">
                         <Link to="wishlist">
                             <div>&#10084;</div>
                         </Link>
-                        <div className="Badge1" style={{display:wishlist.length>0? "":"none"}} >
+                        <div className="Badge1" style={{ display: wishlist.length > 0 ? "" : "none" }} >
                             <div>{wishlist.length}</div>
                         </div>
                     </li>
                     <li className="atribute badge">
                         <Link to="cart">
-                          <div >&#128722;</div>
+                            <div >&#128722;</div>
                         </Link>
-                        <div className="Badge1" style={{display:cart.length>0? "":"none"}}>
-                        <div>{cart.length}</div>
+                        <div className="Badge1" style={{ display: cart.length > 0 ? "" : "none" }}>
+                            <div>{cart.length}</div>
                         </div>
                     </li>
                 </ul>
