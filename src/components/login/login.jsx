@@ -3,11 +3,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { LoginValidChecker } from "../../utils/MailPasswordChecker";
 import { useAuthContext } from "../../contexts/auth-context";
+import { useWishlistCartContext } from "../../contexts/WishList-Cart";
 
 const Login = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
+    const { dispatchWishlistCart } = useWishlistCartContext();
     const [showPassword, setShowPassword] = useState(false);
     const [loginDetails, setLoginDetails] = useState({ email: "", password: "" });
     const [error, setError] = useState({ isError: true })
@@ -15,7 +17,7 @@ const Login = () => {
 
     useEffect(() => {
         if (!error.isError) {
-            Login(loginDetails);
+            Login(loginDetails, dispatchWishlistCart);
         }
     },[error]);
     
