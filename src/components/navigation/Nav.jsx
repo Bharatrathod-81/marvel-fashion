@@ -12,11 +12,15 @@ const Navigation = () => {
 
     const { wishlistCartValues: {
         wishlist, cart
-    } } = useWishlistCartContext();
+    }, dispatchWishlistCart } = useWishlistCartContext();
 
     const { dispatchProductState } = useFilteredProduct();
 
-
+    const LogoutHandler = () => {
+        Logout();
+        dispatchWishlistCart({ type: "INITIAL_STATE"});
+    }
+    
     return (
         <nav className="nav-body">
             <ul className="list-col-left">
@@ -33,7 +37,7 @@ const Navigation = () => {
                 <ul className="list-col-right">
                     {isLogin.user ?
                         <li
-                            onClick={Logout}
+                            onClick={LogoutHandler}
                             className="atribute login-btn">
                             Logout
                         </li>
