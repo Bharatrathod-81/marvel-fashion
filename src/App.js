@@ -1,6 +1,5 @@
 import "./App.css";
-import {  Routes , Route } from "react-router-dom";
-import Mockman from "mockman-js";
+import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/navigation/Nav";
 import { Footer } from "./components/Footer/Footer";
 import Home from "./pages/homePage/homePage";
@@ -11,21 +10,35 @@ import LoginPage from "./pages/login-page/login-page";
 import SignUpPage from "./pages/sign-up-page/signUp-page";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { RequireAuth } from "./requireAuth";
 
 function App() {
   return (
     <div className="App">
-      <Navigation/>
-        <Routes >
-          <Route path="/" element={<Home />} />
-          <Route path="products" element={<ProductStore />}/>
-          <Route path="wishlist" element={<WishListPage />}/>
-          <Route path="cart" element={<CartPage />}/>
-          <Route path="login" element={<LoginPage />}/>
-          <Route path="signup" element={<SignUpPage/>}/>
-        </Routes>
-      <Footer/>
-      <ToastContainer/>
+      <Navigation />
+      <Routes >
+        <Route path="/" element={<Home />} />
+        <Route path="products" element={<ProductStore />} />
+        <Route path="login" element={<LoginPage />} />
+        <Route path="signup" element={<SignUpPage />} />
+
+        <Route path="wishlist"
+          element={
+            <RequireAuth>
+              <WishListPage />
+            </RequireAuth>
+          } />
+
+        <Route path="cart"
+          element={
+            <RequireAuth>
+              <CartPage />
+            </RequireAuth>
+          } />
+          
+      </Routes>
+      <Footer />
+      <ToastContainer />
     </div>
   );
 }

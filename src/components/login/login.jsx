@@ -19,18 +19,12 @@ const Login = () => {
         }
     },[error]);
     
-    let path = "/login";
-    let user = localStorage.getItem("user");
-
-    if (location.state !== null) {
-        path = location.state.from.pathname;
-    };
 
     useEffect(() => {
-        if (user) {
-            navigate(path)
+        if (isLogin.user && location.state !== null) {
+            navigate(location.state.pathname)
         }
-    }, [user, path, isLogin]);
+    }, [isLogin, error]);
 
     const inputHandler = (e) => {
         const { name, value } = e;
