@@ -1,6 +1,7 @@
 import "./cart-listing.css";
 import { Link } from "react-router-dom";
 import { useWishlistCartContext } from "../../contexts/WishList-Cart";
+import { DeleteFromCart, IncrementAndDecrement } from "../../contexts/servicesContext";
 
 
 const RendingCart = () => {
@@ -14,12 +15,22 @@ const RendingCart = () => {
     let totalItems = 0;
     if (cart[0]!==undefined) {
         totalValue = cart.reduce(
-            (acc, cur) => acc + cur.price * cur.cartQuantity,0);
+            (acc, cur) => acc + cur.price * cur.qty,0);
 
         totalItems = cart.reduce(
-            (acc, cur) => cur.cartQuantity>1 ? acc + (cur.cartQuantity-1) : acc,0 );
+            (acc, cur) => cur.qty>1 ? acc + (cur.qty-1) : acc,0 );
         totalItems = totalItems + cart.length
     };
+
+    const actionHandler = (action, data) => {
+        if (action === "decrement" && data.qty > 1) {
+            IncrementAndDecrement(data._id, action, dispatchWishlistCart);
+        } else if (action === "increment") {
+            IncrementAndDecrement(data._id, action, dispatchWishlistCart);
+        } else {
+            DeleteFromCart(data._id, dispatchWishlistCart)
+        }
+    }
 
     
     return (
@@ -36,27 +47,36 @@ const RendingCart = () => {
                     {cart.map(item => {
                         return (
                             <div className="cart-Cards" key={item.id}>
+
                                 <img className="cart-card-Img" src={item.image} />
+
                                 <div className="cart-card-text">
+
                                     <h4 className="cart-car">{item.categoryName}</h4>
                                     <small className="cart-car">{item.model}</small>
                                     <h3>₹{item.price}<span className="max-price"> ₹{ item.price*2}</span></h3>
                                     <span className="discount-text">50% off</span>
+
                                     <div className="product-quantity">
                                         <small>Quantity</small>
+
                                         <button
-                                         onClick={() => dispatchWishlistCart({type:"INCREASE_ITEMS",payload:item})}
+                                         onClick={() => actionHandler("increment", item)}
                                          className="QuantityIncrease-Btn"
                                          >+</button>
-                                        <small className="quantity-num">{item.cartQuantity}</small>
+
+                                        <small className="quantity-num">{item.qty}</small>
+
                                         <button
-                                         onClick={() => dispatchWishlistCart({type:"DECREASE_ITEMS",payload:item})}
+                                         onClick={() => actionHandler("decrement", item)}
                                          className="QuantityIncrease-Btn"
                                          >-</button>
+
                                     </div>
+
                                     <button 
                                      className="cart-card-Btn"
-                                     onClick={() => dispatchWishlistCart({type:"REMOVE_FROM_CART",payload:item})}
+                                     onClick={() => actionHandler("delete", item)}
                                      >Remove from Cart</button>
                                     
                                     {wishlist.some(data => data.id === item.id) ?

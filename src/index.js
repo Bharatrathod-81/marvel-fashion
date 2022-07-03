@@ -9,6 +9,7 @@ import { ProductContextProvider } from "./contexts/product-context";
 import { FilteredProductProvider } from "./contexts/filter-product-Context";
 import { WishlistAndCartProvider } from "./contexts/WishList-Cart";
 import { AuthProvider } from "./contexts/auth-context";
+import { ServicesProvider } from "./contexts/servicesContext";
 
 
 // Call make Server
