@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
     });
     
     // for login
-    const Login = async ({ email, password }) => {
+    const Login = async ({ email, password }, dispatch) => {
         try{
             const { data, status } = await axios.post("/api/auth/login", { email, password });
             localStorage.setItem("token", data.encodedToken);
@@ -21,6 +21,7 @@ export const AuthProvider = ({ children }) => {
 
             if (status === 200){
                 toast.success(`Welcome Back ${data.foundUser.firstName}`)
+                dispatch({type: "RE_LOGIN", payload:data.foundUser})
             }
         } catch (err){
             console.log(err);
