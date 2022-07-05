@@ -3,5 +3,7 @@
     display: flex;
     justify-content: center;
     width: 97%;
-    border:2px solid;
+    justify-content: space-between;
+    align-content: space-between;
+}
 }
