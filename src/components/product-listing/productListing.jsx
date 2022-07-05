@@ -10,8 +10,8 @@ const getFilteredProducts = () => {
 
     const { productList } = useProductList();
     let copyOfProductList = [...productList];
-    
-    const { productState:{
+
+    const { productState: {
         sort,
         category,
         searchQuery,
@@ -19,59 +19,70 @@ const getFilteredProducts = () => {
         initialRating,
         fastDelivery,
         inStock } } = useFilteredProduct();
-    
+
     if (fastDelivery) {
-        copyOfProductList = copyOfProductList.filter(({fastDelivery}) => fastDelivery);
+        copyOfProductList = copyOfProductList.filter(({ fastDelivery }) => fastDelivery);
     };
 
     if (inStock) {
-        copyOfProductList = copyOfProductList.filter(({inStock}) => inStock);
+        copyOfProductList = copyOfProductList.filter(({ inStock }) => inStock);
     };
 
     if (initialPrice) {
-        copyOfProductList = copyOfProductList.filter(({price}) => (initialPrice-1)<price);
+        copyOfProductList = copyOfProductList.filter(({ price }) => (initialPrice - 1) < price);
     };
 
     if (initialRating) {
-        copyOfProductList = copyOfProductList.filter(({rating}) => rating>initialRating);
+        copyOfProductList = copyOfProductList.filter(({ rating }) => rating > initialRating);
     };
 
     if (searchQuery) {
-        copyOfProductList = copyOfProductList.filter(({categoryName}) => categoryName.toLowerCase().includes(searchQuery.toLowerCase()));
+        copyOfProductList = copyOfProductList.filter(({ categoryName }) => categoryName.toLowerCase().includes(searchQuery.toLowerCase()));
     };
 
 
-    if (category[0]!==undefined) {
-        copyOfProductList = copyOfProductList.filter(({categoryName}) => category.includes(categoryName));
+    if (category[0] !== undefined) {
+        copyOfProductList = copyOfProductList.filter(({ categoryName }) => category.includes(categoryName));
     };
 
     if (sort) {
-        copyOfProductList = copyOfProductList.sort((a, b) => sort=== "LOW_TO_HIGH" ? a.price - b.price:b.price - a.price);
+        copyOfProductList = copyOfProductList.sort((a, b) => sort === "LOW_TO_HIGH" ? a.price - b.price : b.price - a.price);
     };
 
-    return copyOfProductList ;
+    return copyOfProductList;
 };
 
-const RendingProducts = () => {
+const RendingProducts = ({ func }) => {
 
-    return(
+    const { setShowSideBar } = func;
+
+    return (
         <div className="product-container">
+
             <div className="container-heading">
                 <h4>Showing All Products {getFilteredProducts().length}</h4>
             </div>
+
+            <div
+                onClick={() => setShowSideBar(prev => !prev)}
+                className="sideBar-Btn">
+                <i class="fa fa-reorder"></i>
+            </div>
+
             <div className="filter-products">
                 {getFilteredProducts().map(item => {
-                    return(
+                    return (
                         <div key={item.id}>
-                        <SingleProductFunc data={item} />
+                            <SingleProductFunc data={item} />
                         </div>
                     );
                 })}
             </div>
+            
         </div>
     );
 
 };
 
-export {RendingProducts} ;
+export { RendingProducts };
 

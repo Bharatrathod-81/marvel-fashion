@@ -2,7 +2,9 @@
     background-color: var(--container-background-color);
     width: 88%;
     margin-left: 1rem;
+    position: relative;
 }
+
 
 .filter-products{
     display: flex;
@@ -13,4 +15,20 @@
 .container-heading{
     margin: 0.5rem;
     display: flex;
+}
+
+
+.sideBar-Btn{
+    font-size: large;
+    background-color: rgba(167, 164, 164, 0.842);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    position: fixed;
+    z-index: 2;
+    display: none;
 }

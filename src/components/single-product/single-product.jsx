@@ -49,12 +49,12 @@ const SingleProductFunc = ({ data }) => {
                     (<button
                         className="Added-Btn"
                         onClick={() => addAndRemoveItemHandler("REMOVE", data)}
-                    >&#10084;</button>
+                    ><i class="fa fa-heart"></i></button>
                     ) : (
                     <button
                         className="heart-Btn"
                         onClick={() => addAndRemoveItemHandler("ADD", data)}
-                    >&#10084;
+                    ><i class="fa fa-heart"></i>
                     </button>
                     )
                 }

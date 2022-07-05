@@ -1,7 +1,8 @@
 import "./cart-listing.css";
 import { Link } from "react-router-dom";
 import { useWishlistCartContext } from "../../contexts/WishList-Cart";
-import { DeleteFromCart, IncrementAndDecrement } from "../../contexts/servicesContext";
+import { AddToWishlist, DeleteFromCart, IncrementAndDecrement } from "../../contexts/servicesContext";
+
 
 
 const RendingCart = () => {
@@ -63,14 +64,14 @@ const RendingCart = () => {
                                         <button
                                          onClick={() => actionHandler("increment", item)}
                                          className="QuantityIncrease-Btn"
-                                         >+</button>
+                                         ><i class="fa fa-plus-circle"></i></button>
 
                                         <small className="quantity-num">{item.qty}</small>
 
                                         <button
                                          onClick={() => actionHandler("decrement", item)}
                                          className="QuantityIncrease-Btn"
-                                         >-</button>
+                                         ><i class="fa fa-minus-circle"></i></button>
 
                                     </div>
 
@@ -86,7 +87,7 @@ const RendingCart = () => {
                                             ):(
                                                 <button 
                                             className="add-cart-Btn"
-                                            onClick={() => dispatchWishlistCart({type:"ADD_TO_WISHLIST",payload:item})}
+                                            onClick={() => AddToWishlist(item, dispatchWishlistCart)}
                                             >
                                             Add to Wishlist</button>
                                         )

@@ -1,6 +1,6 @@
 .footer-containet {
+    box-sizing: border-box;
     position: relative;
-    /* top: 9.5%; */
     width: 100%;
     display: flex;
     flex-direction: row;

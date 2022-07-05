@@ -38,7 +38,7 @@ function App() {
           
       </Routes>
       <Footer />
-      <ToastContainer />
+      <ToastContainer className="toast"/>
     </div>
   );
 }

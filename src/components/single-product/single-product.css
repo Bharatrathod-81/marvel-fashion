@@ -2,18 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-/*     position: relative; */
-/*     width: 17rem; */
+    width: 20rem;
     height: 45vh;
     border: 2px solid rgb(233, 230, 230) ;
-/*     background-color: white; */
     margin: 1rem 0 3rem;
 }
 
 
 .card-container{
     position: relative;
-    width: 17rem;
+    width: 19rem;
     background-color: white;
 }
 
@@ -37,7 +35,6 @@
 
 .heart-Btn{
     position: absolute;
-    font-size: xx-large;
     right: 9%;
     top: 9%;
     width: 3rem;
@@ -46,10 +43,13 @@
     background-color: rgba(167, 164, 164, 0.842);
 }
 
+.fa-heart{
+    font-size: 15px;
+}
+
 
 .Added-Btn{
     position: absolute;
-    font-size: xx-large;
     right: 9%;
     top: 9%;
     width: 3rem;

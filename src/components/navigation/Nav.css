@@ -8,6 +8,8 @@
     background-color: var(--primary-color);
     padding: 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .logo{
@@ -30,26 +32,37 @@
 }
 
 .list-col-left{
+    position: relative;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     margin: 1rem;
+    width: 70%;
+    justify-content: space-between;
     
 }
 
 .list-col-right{
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    justify-content: center;
     margin-left: auto;
-    width: 14rem;
+    margin-right: 0.5rem;
+    width: 10rem;
 }
+
+
 
 .badge{
     display: flex;
     position: relative;
-    padding: 0.6rem ;
+    padding: 0.5rem ;
+    font-size: 20px;
+    color: var(--text-color);
+    
 }
 
 
@@ -67,12 +80,13 @@
     border:1px solid var(--primary-color);
     font-size: 10px;
     font-weight: bold;
-    width: 1rem;
-    height: 1rem;
+    width: 0.9rem;
+    height: 0.9rem;
     border-radius: 50%;
     top: 0%;
     right: 0%;
 }
+
 
 .atribute{
     color: var(--text-color);
@@ -88,20 +102,39 @@
 }
 
 .input-container{
-    width: 35%;
-    margin-left: auto;
+    position: absolute;
+    width: 53%;
+    right: 0%;
+    padding: 0.5rem;
 }
 
+
 .search-input{
-    width: 80%;
+    width: 100%;
+    box-sizing: border-box;
     border-radius: 0.5rem;
     padding: 0.5rem;
 }
+
+.show-search{
+    width: 96% ;
+    padding: 0.7rem ;
+    margin-right: 2rem ;
+    position: absolute;
+    top: -70%;
+    left: -1%;
+    border-radius: 0.5rem;
+    z-index: 1;
+    display: block;
+}
+
 
 .searchBtn{
     font-size: large;
     background-color: var(--primary-color);
     color: var(--text-color);
+    margin: 1rem;
+    display: none;
 }
 
 .a,.button{
