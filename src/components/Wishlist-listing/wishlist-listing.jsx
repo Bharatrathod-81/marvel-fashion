@@ -15,7 +15,6 @@ const RendingWishlist = () => {
     return(
         <div className="wishlist-container">
             <div className="container-heading">
-                <h4>Showing All WishList Products {wishlist.length}</h4>
                 {wishlist.length===0 ? 
                 <Link to="/products">
                    <button className="shop-btn" >Shop Now</button>
