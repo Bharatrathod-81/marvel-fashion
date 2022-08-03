@@ -37,7 +37,6 @@ const RendingCart = () => {
     return (
         <div className="cart-container">
             <div className="container-heading">
-                <h4>Showing All Cart Products {cart.length}</h4>
                 {cart.length===0 ? 
                 <Link to="/products">
                    <button className="shop-btn" >Shop Now</button>
