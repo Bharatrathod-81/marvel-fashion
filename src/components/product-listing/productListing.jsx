@@ -57,7 +57,7 @@ const RendingProducts = ({ func }) => {
     const { setShowSideBar } = func;
 
     return (
-        <div className="product-container">
+        <div className="productlisting-container">
 
             <div className="container-heading">
                 <h4>Showing All Products {getFilteredProducts().length}</h4>
